@@ -1,7 +1,3 @@
-# Handling Data Array agar menghasilkan output yg baik | Part 1
-
-## Soal 1
-```js
 /*
 Buatlah sebuah fungsi dengan nama dataHandling dengan sebuah parameter untuk menerima argumen. Argumen yang akan diterima adalah sebuah array yang berisi beberapa array sejumlah n.
 Tugas kamu adalah mengimplementasikan fungsi dataHandling agar dapat menampilkan data-data pada dari argumen seperti di bawah ini:
@@ -13,6 +9,17 @@ let input = [
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ]
 
+function dataHandling(arr){
+    for(let i = 0; i < arr.length; i++){
+        console.log (`
+        Nomor ID: ${arr[i][0]}
+        Nama Lengkap: ${arr[i][1]}
+        TTL: ${arr[i][2]} ${arr[i][3]}
+        Hobi: ${arr[i][4]}`);
+    }
+}
+
+dataHandling(input);
 
 /*
 output yang diharapkan
@@ -37,26 +44,3 @@ Nama Lengkap:  Bintang Senjaya
 TTL:  Martapura 6/4/1970
 Hobi:  Berkebun
 */
-```
-
-## Soal 2 
-pada soal yg kedua, kalian harus belajar method `splice`, `slice`, `join`, 'split', dan lainnya
-```js
-let input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
-
-function dataHandling(input) {
-
-}
-
-dataHandling2(input);
-
-/**
- * keluaran yang diharapkan (pada console)
- *
- * ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
- * Mei
- * ["1989", "21", "05"]
- * 21-05-1989
- * Roman Alamsyah //batasi hanya 15 karakter saja pada array elemen ke 2
- */
-```
